@@ -1,0 +1,5 @@
+B:/Firebase/REST API/build-FirebaseDatabase-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/FirebaseDatabase.dir
+B:/Firebase/REST API/build-FirebaseDatabase-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+B:/Firebase/REST API/build-FirebaseDatabase-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+B:/Firebase/REST API/build-FirebaseDatabase-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/FirebaseDatabase_autogen_timestamp_deps.dir
+B:/Firebase/REST API/build-FirebaseDatabase-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/FirebaseDatabase_autogen.dir

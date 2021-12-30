@@ -1,0 +1,56 @@
+Năm 2011, tiền thân của firebase là Envolve để tích hợp API vào app chat. Sau được Google mua lại vào 2014 và gọi là firebase-dịch vụ CSDL hoạt động trên nên tảng điện toán đám mây
+
+Firebase có rất nhiều tính năng:
+Real-time Database cho phép lưu trữ đồng bộ dự liệu thời gian thực. Khi đăng ký 1 tk trên firebase là ta đã có 1 CSDL thời gian thực, dữ liệu nhận được dưới dạng JSON đồng bộ với mọi client đa nền tảng. Tất cả dữ liệu đều được cập nhập qua kết nối an toàn SSL. Khi mất mạng thì dữ liệu lưu ở local, có mạng sẽ đồng bộ. REST API
+Authentication cung cấp cho App các phương thức xác thực qua email, tk google, facebook,..
+Firebase cloud messaging là chức năng khởi nguồn giúp xây dựng ứng dụng chat realtime đẩy thông báo tới nh thiết bị khác nhau kèm vô số chức năng
+Firebase database query giúp lấy dữ liệu như kiểu SQL server ấy
+Remote Config giúp cập nhập ứng dụng nhanh chóng không cần xuất bản mới lên play store; giúp ứng dụng cập nhập dữ liệu ngay lập tức VD người dùng xóa ứng dụng tải lại thì config của ứng dụng phải thủ công làm lại thì firebase sẽ cài đặt thông số bên máy chủ giúp người dùng cập nhập ngay lập tức.
+Firebase cung cấp hosting luôn theo bảo mật SSL từ mạng CDN. CDN-Content Delivery Network là mạng lưới máy chủ lưu bản sao của nội dung tĩnh trong website và phân phối đến nhiều máy chủ PoP. Mạng lưới máy chủ CDN phân phối mọi nơi toàn cầu. Từ PoP(Point of Presence), dữ liệu sẽ gửi tiếp đến người dùng cuối, bản sao nội dung trên máy chủ gần nhất sẽ trả về khi người dùng truy cập website
+
+Firebase miễn phí và trả phí nếu muốn nhiều tính năng nâng cao.
+Firebase giúp người dùng tập trung hơn vào giao diện vì máy chủ nó lo hết, giảm chi phí, đồng bộ
+Firebase không có máy chủ nên không gặp các vấn đề về mở rộng máy chủ
+Firebase có tích hợp các API hỗ trợ Machine Learning như nhận diện văn bản, khuôn mặt, hình ảnh, quét mã vạch,..
+Cho phép sao lưu tự động nên kbh sợ mất dữ liệu
+
+Firebase kp là mã nguồn mở, bị hạn chế ở nhiều quốc gia, chỉ hoạt động với CSDL NoSQL nên truy vấn mà phức tạp sẽ rất khó vì toàn JSON và k có tính năng SQL nào, truy vấn chậm, giá đắt nếu trả phí, chỉ chạy trên google cloud, thiếu 1 vài tính năng
+
+Hỗ trợ ứng dụng Android, iOS, Web.
+
+Bên cạnh firebase cũng có các nền tảng phát triển ứng dụng khác cạnh tranh như: Back4app mã nguồn mở, Backendless là Mobile Backend, AWS Amplify phát triển full stack, Parse, Kinvey,..
+
+Firebase được dùng cho ứng dụng nhỏ, với ứng dụng lớn còn tùy
+
+VĐ: tạo 1 app bán hàng và cho phép người dùng thêm sản phẩm vào whish list
+C1: mỗi use có trường wish_list là 1 mảng chứa các products họ yêu thích
+=> ez nhất nhưng giả sử muốn update giá 1 sản phẩm-> ta phải duyệt tất cả user và update lại product trong wish_list của họ-> k tốt
+C2: tạo wishlist chung ở ngoài, mỗi item có 1 key userID để biết ai chọn nó trong wishList
+=> Mọi client đều nhận event khi 1 user tương tác vào wishlist chung đó-> bị giảm hiệu năng
+C3: làm theo kiểu RDBMS(Relational Database Management System). VD: mảng ProductIDs trên mỗi user or 1 object riêng map userID với ProductID => nhưng dù cách nào thì cũng rất phức tạp để query ví dụ show wishlist của user thì phải lấy lần lượt
+Nên nhớ firebase nó là NoSQL nên k có các câu lệnh truy vấn để reduce hay join,.. nên gặp vấn đề trên
+
+Cách dùng firebase hosting cho trang web tĩnh: free thì chỉ dùng được 1GB, có custom domain
+login firebase là google account-> create project-> tên dự án, chọn cả set up firebase hosting và gõ tên url web ra-> continue-> </> -> tên app-> register-> continue to console-> build-> hosting-> get started-> cd vào thư mục chứa thư mục public của dự án-> npm install -g firebase-tools -> firebase init-> space để chọn, enter để xác nhận(có thể chọn nh options)-> nó bảo có chọn thư mục public là nơi ta có thể gõ tên thư mục vào, để là public thì ấn enter(có sẵn public và index.html bên trong r)->k chọn github, dự án của ta phải có file gốc là index.html, k chọn overwrite cái index.html của ta, k chọn single page-> firebase deploy-> refresh trang
+-> có thể host nhiều site 1 lúc. domain là web.app muốn đổi phải mua
+
+Với react app: làm tương tự-> ở thư mục chưa public->npm run build-> ... -> chọn folder public hay k thì ta gõ build vào
+Ta k cần phải vào web firebase và tạo sẵn 1 app nx mà chỉ cần-> create a new project(k dùng existing project)-> gõ tên project(là url web hiển thị, k viết hoa)-> enter tiếp để xác nhận dùng project id cùng tên luôn-> goi single app hay k tức là có dồn tất cả vào file index.html hay k thì chọn có->..
+
+Cách dùng firebase cung rest API với file JSON:
+tạo dự án tương tự-> build-> realtime database-> create database-> start in test mode là mở bất kỳ ai, start in locked mode là phải cấp quyền, với các ứng dụng thực thì phải dùng locked mode-> mục data-> thêm file json or tự gõ theo nhánh-> để gõ: ấn nút mở xuống và gõ tên, mở xuống lại gõ tiếp, khi được ít nhất 2 cấp có thể dừng và ấn Add, sau đó mở rộng tiếp-> tương tác với DB qua url bên trên. Mỗi 1 nhánh tạo ra 1 đường link đến file json như ở VD thì nhánh One trong Pets có url là .../Pets/One.json
+=> ta có thể chỉnh quyền ở tab rules read và write là true hết thì mọi ứng dụng bên ngoài đều có thể chỉnh sửa database của ta-> publish rules
+=> trong documentation có nói rõ rest api của firebase như nào
+=> muốn dùng trong Qt nhớ cài openssl
+
+Xây dựng database authenticator cho ứng dụng REST API với firebase(đây mới chỉ là authen cho rest api):
+Ta vào firebase chỉnh 2 rules là: "auth.uid != null" (trong docs có hết)=> sẽ thành giới hạn ứng dụng nào được truy câp vào database-> vào lại ứng dụng bên trên sẽ thấy trả ra permission denied
+-> lấy apikey: Project Overview-> Add web app-> Register App là xong-> trong phần Your App npm có trường apikey cần lấy
+-> Trong docs có hướng dẫn link, từng trường, response là gì, ví dụ với curl là https://firebase.google.com/docs/reference/rest/auth#section-create-email-password-> trong app: (theo docs) ta chỉ cần POST data vào link JSON kèm api key là được. data đó có các trường payload json được xđ từ trước, ở th này là email, password, returnSecureToken-> chuyển sang json và post vào link kia
+-> project firebase-> authentication-> sign-in method-> email/password enabled(tắt CORS extension)-> khi có người tham gia vào project sẽ hiện ở mục user-> như v là họ đã sign up vào ứng dụng của ta bằng địa chỉ gmail của họ
+=> nếu họ tiếp tục signup bằng địa chỉ email đó sẽ báo lỗi vì firebase check trùng. Ở mục user, ta có toàn quyền disable account hay delete account
+-> sau khi sign up lần sau họ có thể sign in với link sign in tương tự trong docs(phải đúng email và password)
+-> khi đã signin cung như sign up thì họ đã có thể get post data vào cơ sở dữ liệu như bth r đó
+=> tương tự có rất nhiều tính năng trong docs mà thao tác chỉ là post payload vào url nào đó mà thôi như sign in ẩn danh,..
+-> Khi người dùng signIn thành công, ta phải xử lý database cho phép người dùng lấy thông tin(là authenticated database call)=> có 2 cách để làm điều này https://firebase.google.com/docs/database/rest/auth: 1 là dùng Google OAuth2, 2 là dùng idToken.
+-> Với cách 2: nó sẽ trả về 1 cái tokenId trong response, nếu k nó sẽ trả ra error(check error)-> ta parse trường idToken và nhét vào trường auth của url(trong docs) thì cái url đó sẽ valid với user hiện tại thao tác thoải mái

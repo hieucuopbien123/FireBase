@@ -1,0 +1,5 @@
+B:/Firebase/Authentication/build-Authentication-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/Authentication.dir
+B:/Firebase/Authentication/build-Authentication-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+B:/Firebase/Authentication/build-Authentication-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+B:/Firebase/Authentication/build-Authentication-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/Authentication_autogen_timestamp_deps.dir
+B:/Firebase/Authentication/build-Authentication-Desktop_Qt_6_1_2_MinGW_64_bit-Debug/CMakeFiles/Authentication_autogen.dir

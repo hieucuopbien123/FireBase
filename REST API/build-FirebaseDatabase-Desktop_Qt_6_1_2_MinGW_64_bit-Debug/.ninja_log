@@ -1,0 +1,19 @@
+# ninja log v5
+3	3049	6613234270100376	FirebaseDatabase_autogen/timestamp	7052cd4c650652f
+3052	13148	6613234370437881	CMakeFiles/FirebaseDatabase.dir/FirebaseDatabase_autogen/mocs_compilation.cpp.obj	c121bcb285658f7b
+3383	3735	6613240737904869	FirebaseDatabase.exe	bc320a11ca1d6b98
+3055	13194	6613234371018938	CMakeFiles/FirebaseDatabase.dir/main.cpp.obj	4d35d8f5aff8d8c1
+8	3383	6613240734404878	CMakeFiles/FirebaseDatabase.dir/databasehandler.cpp.obj	9c4cc6aa523813ce
+16	641	6613253152370106	FirebaseDatabase_autogen/timestamp	7052cd4c650652f
+642	4655	6613253192474105	CMakeFiles/FirebaseDatabase.dir/FirebaseDatabase_autogen/mocs_compilation.cpp.obj	4f3f6d7707f86522
+641	4708	6613253192982852	CMakeFiles/FirebaseDatabase.dir/main.cpp.obj	b1cd6519b2cc31a
+643	4804	6613253193984212	CMakeFiles/FirebaseDatabase.dir/databasehandler.cpp.obj	85d25dc7684f5efc
+4804	5166	6613253197488983	FirebaseDatabase.exe	b11100f9c86ed897
+9	5690	6613254080318887	CMakeFiles/FirebaseDatabase.dir/databasehandler.cpp.obj	85d25dc7684f5efc
+5690	6326	6613254086665249	FirebaseDatabase.exe	b11100f9c86ed897
+7	3648	6613254528332865	CMakeFiles/FirebaseDatabase.dir/databasehandler.cpp.obj	85d25dc7684f5efc
+3649	3984	6613254531640949	FirebaseDatabase.exe	b11100f9c86ed897
+7	2728	6613256939502321	CMakeFiles/FirebaseDatabase.dir/databasehandler.cpp.obj	85d25dc7684f5efc
+2728	3002	6613256942211963	FirebaseDatabase.exe	b11100f9c86ed897
+7	3216	6613257205818358	CMakeFiles/FirebaseDatabase.dir/databasehandler.cpp.obj	85d25dc7684f5efc
+3216	3470	6613257208336902	FirebaseDatabase.exe	b11100f9c86ed897
